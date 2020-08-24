@@ -40,7 +40,7 @@ const destroy = (req, res) => {
     db.Ballot.findByIdAndDelete(req.params.id, (err, deletedBallot) => {
         if (err) console.log('Error in Ballots#destroy:', err);
 
-        res.status.json(deletedBallot);
+        res.status(200).json(deletedBallot);
     });
 };
 
