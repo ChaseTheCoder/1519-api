@@ -19,6 +19,7 @@ app.use(express.json());
 
 // MIDDLEWARE API ROUTES, ARTICLES
 app.use('/api/v1/ballot', routes.ballot);
+app.use('/api/v1/article', routes.article);
 
 app.listen(port, function() {
     console.log(`Server is running on Port: ${port}`);

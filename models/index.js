@@ -16,4 +16,5 @@ mongoose.connect(connectionString, configOptions)
 
 module.exports = {
     Ballot: require('./Ballot'),
+    Article: require('./Article'),
 };
