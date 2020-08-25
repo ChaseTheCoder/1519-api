@@ -21,6 +21,12 @@ const create = (req, res) => {
         if (err) console.log('Error in Ballots#index:', err);
 
         res.status(200).json(savedBallot);
+        db.Ballot.findById(req.body.ballotId, (err, foundBallot) => {
+            foundBallot.articles.push(newArticle);
+            foundBallot.save((err, savedBallot) => {
+                console.log('savedBallot: ', savedBallot);
+            })
+        })
     });
 };
 
