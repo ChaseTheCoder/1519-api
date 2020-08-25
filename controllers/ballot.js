@@ -4,7 +4,7 @@ const index = (req, res) => {
     db.Ballot.find({}, (err, foundBallots) => {
         if (err) console.log('Error in Ballots#index:', err);
 
-        res.status(200).json({ballot: foundBallots});
+        res.status(200).json(foundBallots);
     });
 };
 
