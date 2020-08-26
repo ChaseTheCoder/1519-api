@@ -17,10 +17,17 @@ const show = (req, res) => {
 };
 
 const create = (req, res) => {
-    db.Article.create(req.body, (err, savedArticle) => {
+    db.Article.create(req.body, (err, newArticle) => {
         if (err) console.log('Error in Articles#index:', err);
-
-        res.status(200).json(savedArticle);
+            console.log(req.body)
+            db.Ballot.findById(req.body.ballotid, (err, foundBallot) => {
+                console.log(foundBallot)
+                foundBallot.articles.push(newArticle);
+                foundBallot.save((err, savedBallot) => {
+                    console.log('savedBallot: ', savedBallot);
+                })
+            })
+            res.status(200).json(newArticle);
     });
 };
 
