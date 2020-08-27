@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
 require('dotenv').config();
 
-console.log('MONGO DB =', process.env.MONGODB_URI);
+console.log('MONGO DB =', process.env.MONGODB_CS);
 
-const connectionString = process.env.MONGODB_URI;
+const connectionString = process.env.MONGODB_CS;
 const configOptions = {
     useNewUrlParser: true,
     useCreateIndex: true,
