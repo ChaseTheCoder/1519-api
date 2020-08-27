@@ -1,0 +1,44 @@
+{
+    "ballot": [
+        {
+            "question": "President and Vice President of the United States",
+            "type": "candidate"
+        },
+        {
+            "question": "United States Senator (statewide for a 6-year term)",
+            "type": "candidate"
+        },
+        {
+            "question": "Representatives in Congress (one in each district to a 2-year term)",
+            "type": "candidate"
+        },
+        {
+            "question": "State Senators (to a 2-year term) in these districts that are partially or entirely in the City of Chicago: 1, 4, 7, 10, 11, 13, 16, 28",
+            "type": "candidate"
+        },
+        {
+            "question": "Representatives in the General Assembly (one in each district to a 2-year term)",
+            "type": "candidate"
+        },
+        {
+            "question": "Commissioners of the Metropolitan Water Reclamation District of Greater Chicago (3 to be 6-year terms)",
+            "type": "candidate"
+        },
+        {
+            "question": "Clerk of the Circuit Court of Cook County (countywide to a 4-year term)",
+            "type": "candidate"
+        },
+        {
+            "question": "State's Attorney of Cook County (countywide to a 4-year term)",
+            "type": "candidate"
+        },
+        {
+            "question": "Commissioner of the Board of Review of Cook County (District 1 only)",
+            "type": "candidate"
+        },
+        {
+            "question": "Illinois Supreme Court, Illinois Appellate Court, Cook County Circuit and Cook County Subcircuit Judges to fill vacancies",
+            "type": "candidate"
+        }
+    ]
+}
