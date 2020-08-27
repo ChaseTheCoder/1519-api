@@ -1,11 +1,10 @@
 const express = require('express');
-const app = express();
-const bodyParser = require('body-parser');
 const cors = require('cors');
-const mongoose = require('mongoose');
 require('dotenv').config();
+
 const routes = require('./routes');
 const port = process.env.PORT;
+const app = express();
 
 //CORS 
 app.use(cors({
@@ -20,6 +19,7 @@ app.use(express.json());
 
 // MIDDLEWARE API ROUTES, ARTICLES
 app.use('/api/v1/ballot', routes.ballot);
+app.use('/api/v1/article', routes.article);
 
 app.listen(port, function() {
     console.log(`Server is running on Port: ${port}`);

@@ -4,12 +4,14 @@ const index = (req, res) => {
     db.Ballot.find({}, (err, foundBallots) => {
         if (err) console.log('Error in Ballots#index:', err);
 
-        res.status(200).json({ballot: foundBallots});
+        res.status(200).json(foundBallots);
     });
 };
 
 const show = (req, res) => {
-    db.Ballot.findById(req.params.id, (err, foundBallot) => {
+    db.Ballot.findById(req.params.id)
+        .populate('article')
+        .exec((err, foundBallot) => {
         if (err) console.log('Error in Ballots#index:', err);
 
         res.status(200).json(foundBallot);
@@ -40,7 +42,7 @@ const destroy = (req, res) => {
     db.Ballot.findByIdAndDelete(req.params.id, (err, deletedBallot) => {
         if (err) console.log('Error in Ballots#destroy:', err);
 
-        res.status.json(deletedBallot);
+        res.status(200).json(deletedBallot);
     });
 };
 

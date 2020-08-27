@@ -3,7 +3,11 @@ const Schema = mongoose.Schema;
 
 const BallotSchema = new Schema({
     question: String,
-    type: String
+    type: String,
+    articles: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Article'
+    }]
 });
 
 const Ballot = mongoose.model('Ballot', BallotSchema);
