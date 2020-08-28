@@ -10,7 +10,7 @@ const index = (req, res) => {
 
 const show = (req, res) => {
     db.Ballot.findById(req.params.id)
-        .populate('article')
+        .populate('articles')
         .exec((err, foundBallot) => {
         if (err) console.log('Error in Ballots#index:', err);
 
